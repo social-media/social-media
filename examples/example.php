@@ -7,16 +7,20 @@
  * file that was distributed with this source code.
  */
 
+use JeroenDesloovere\SocialMedia\Objects\TimelinePost as TimelinePost;
 use JeroenDesloovere\SocialMedia\Facebook\Objects\Post as FacebookPost;
 use JeroenDesloovere\SocialMedia\Facebook\Objects\Service as FacebookService;
 
 // define api
 $api = new SocialMedia();
 
-// define message credentials
+// define external post objects
 $service = new FacebookService();
 $post = new FacebookPost();
 
+// define timeline post
+$timelinePost = new TimelinePost($service, $post);
+
 // (un)publish a message
-$api->timeline->publish($service, $post);
-$api->timeline->unpublish($service, $post);
+$api->timeline->publish($timelinePost);
+$api->timeline->unpublish($timelinePost);
