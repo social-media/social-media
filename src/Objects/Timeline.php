@@ -9,8 +9,8 @@ namespace JeroenDesloovere\SocialMedia\Objects;
  * file that was distributed with this source code.
  */
 
-use JeroenDesloovere\SocialMedia\Objects\Post as Post;
-use JeroenDesloovere\SocialMedia\Objects\Service as Service;
+use JeroenDesloovere\SocialMedia\Objects\TimelinePost as TimelinePost;
+use JeroenDesloovere\SocialMedia\Objects\TimelineResult as TimelineResult;
 
 /**
  * Social Media
@@ -24,24 +24,28 @@ class Timeline
     /**
      * Publish to social media service
      *
-     * @param Service $service
-     * @param Post $post
-     * @return ServiceActionResult
+     * @param TimelinePost $post
+     * @return TimelineResult $result
      */
-    public function publish(Service $service, Post $post)
+    public function publish(TimelinePost $post)
     {
-        return $service->publish($post);
+        return new TimelineResult(
+            $post,
+            'publish'
+        );
     }
 
     /**
      * Unpublish from social media service
      *
-     * @param Service $service
-     * @param Post $post
-     * @return ServiceActionResult
+     * @param TimelinePost $post
+     * @return TimelineResult $result
      */
-    public function unpublish(Service $service, Post $post)
+    public function unpublish(TimelinePost $post)
     {
-        return $service->unpublish($post);
+        return new TimelineResult(
+            $post,
+            'unpublish'
+        );
     }
 }
