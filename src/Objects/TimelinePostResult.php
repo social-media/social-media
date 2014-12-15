@@ -18,7 +18,7 @@ use JeroenDesloovere\SocialMedia\Objects\TimelinePost as TimelinePost;
  *
  * @author Jeroen Desloovere <info@jeroendesloovere.be>
  */
-class TimelineResult
+class TimelinePostResult
 {
     /**
      * Action

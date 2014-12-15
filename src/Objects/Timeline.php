@@ -10,7 +10,7 @@ namespace JeroenDesloovere\SocialMedia\Objects;
  */
 
 use JeroenDesloovere\SocialMedia\Objects\TimelinePost as TimelinePost;
-use JeroenDesloovere\SocialMedia\Objects\TimelineResult as TimelineResult;
+use JeroenDesloovere\SocialMedia\Objects\TimelinePostResult as TimelinePostResult;
 
 /**
  * Social Media
@@ -25,11 +25,11 @@ class Timeline
      * Publish to social media service
      *
      * @param TimelinePost $post
-     * @return TimelineResult $result
+     * @return TimelinePostResult $result
      */
     public function publish(TimelinePost $post)
     {
-        return new TimelineResult(
+        return new TimelinePostResult(
             $post,
             'publish'
         );
@@ -39,11 +39,11 @@ class Timeline
      * Unpublish from social media service
      *
      * @param TimelinePost $post
-     * @return TimelineResult $result
+     * @return TimelinePostResult $result
      */
     public function unpublish(TimelinePost $post)
     {
-        return new TimelineResult(
+        return new TimelinePostResult(
             $post,
             'unpublish'
         );
