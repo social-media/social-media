@@ -16,50 +16,38 @@ namespace JeroenDesloovere\SocialMedia\Objects;
  *
  * @author Jeroen Desloovere <info@jeroendesloovere.be>
  */
-interface Service
+class Service
 {
-    /**
-     * Get the disconnect url - Disconnects this app from the social platform.
-     *
-     * @return string
-     */
-    public static function getDisconnectUrl();
+    protected $api;
 
     /**
-     * We need to be able to get an instance
+     * Construct
      *
-     * @return object
+     * @param mixed $api
      */
-    public static function getInstance();
+    public function __construct(
+        $api
+    ) {
+        $this->setApi($api);
+    }
 
     /**
-     * Get user
+     * Get API
      *
-     * @return array
+     * @param mixed
      */
-    public static function getUser();
+    public function getApi()
+    {
+        return $this->api;
+    }
 
     /**
-     * Is connected
+     * Set API
      *
-     * @return bool
+     * @return mixed
      */
-    public static function isConnected();
-
-    /**
-     * Unpublish from Social Media
-     *
-     * @param  int  $id
-     * @return bool
-     */
-    public static function unpublish($id);
-
-    /**
-     * Publish to Social Media
-     *
-     * @param string           $title
-     * @param string[optional] $url
-     * @param mixed[optional]  $media
-     */
-    public static function publish($title, $url, $media);
+    public function setApi($api)
+    {
+        $this->api = $api
+    }
 }
