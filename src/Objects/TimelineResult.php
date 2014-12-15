@@ -104,6 +104,6 @@ class TimelineResult
      */
     public function setTimelinePost(TimelinePost $timelinePost)
     {
-        $this->timelinePost = $post;
+        $this->timelinePost = $timelinePost;
     }
 }
