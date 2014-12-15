@@ -9,7 +9,7 @@ namespace JeroenDesloovere\SocialMedia\Objects;
  * file that was distributed with this source code.
  */
 
-use JeroenDesloovere\SocialMedia\Objects\TimelinePostResult as TimelineResult;
+use JeroenDesloovere\SocialMedia\Objects\TimelineResult as TimelineResult;
 
 /**
  * Social Media
