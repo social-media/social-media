@@ -9,7 +9,8 @@ namespace JeroenDesloovere\SocialMedia\Objects;
  * file that was distributed with this source code.
  */
 
-use JeroenDesloovere\SocialMedia\Objects\TimelinePost as TimelinePost;
+use JeroenDesloovere\SocialMedia\Objects\Post as Post;
+use JeroenDesloovere\SocialMedia\Objects\Service as Service;
 
 /**
  * Social Media
@@ -18,7 +19,7 @@ use JeroenDesloovere\SocialMedia\Objects\TimelinePost as TimelinePost;
  *
  * @author Jeroen Desloovere <info@jeroendesloovere.be>
  */
-class TimelinePostResult
+class TimelineResult
 {
     /**
      * Action
@@ -28,6 +29,11 @@ class TimelinePostResult
     protected $action;
 
     /**
+     * @var Post
+     */
+    protected $post;
+
+    /**
      * Result
      *
      * @var array
@@ -35,9 +41,9 @@ class TimelinePostResult
     protected $result;
 
     /**
-     * @var TimelinePost
+     * @var Service
      */
-    protected $timelinePost;
+    protected $service;
 
     /**
      * Construct
@@ -46,11 +52,13 @@ class TimelinePostResult
      * @param Post $post
      */   
     public function __construct(
-        TimelinePost $post,
+        Service $service,
+        Post $post,
         $action
     ) {
         $this->setAction($action);
-        $this->setTimelinePost($post);
+        $this->setService($service);
+        $this->setPost($post);
         $this->setResult();
     }
 
@@ -65,13 +73,33 @@ class TimelinePostResult
     }
 
     /**
-     * Get timeline post
+     * Set post
      *
-     * @return TimelinePost
+     * @return Post
      */
-    public function getTimelinePost()
+    public function getPost()
     {
-        return $this->timelinePost;
+        return $this->post;
+    }
+
+    /**
+     * Get result
+     *
+     * @return array
+     */
+    public function getResult()
+    {
+        return $this->result;
+    }
+
+    /**
+     * Get service
+     *
+     * @return Service
+     */
+    public function getService()
+    {
+        return $this->service;
     }
 
     /**
@@ -85,25 +113,35 @@ class TimelinePostResult
     }
 
     /**
+     * Set post
+     *
+     * @param Post $post
+     */
+    public function setPost(Post $post)
+    {
+        $this->post = $post;
+    }
+
+    /**
      * Set result
      */
     public function setResult()
     {
         // define variables
-        $timelinePost = $this->getTimelinePost();
-        $service = $timelinePost->getService();
-        $post = $timelinePost->getPost();
+        $action = $this->getAction();
+        $post = $this->getPost();
+        $service = $this->getService();
 
-        $this->result = $service->{$this->getAction()}($post);
+        $this->result = $service->{$action}($post);
     }
 
     /**
-     * Set timeline post
+     * Set service
      *
-     * @param TimelinePost $timelinePost
+     * @param Service $service
      */
-    public function setTimelinePost(TimelinePost $timelinePost)
+    public function setService(Service $service)
     {
-        $this->timelinePost = $timelinePost;
+        $this->service = $service;
     }
 }
