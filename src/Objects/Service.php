@@ -9,6 +9,8 @@ namespace SocialMedia\Objects;
  * file that was distributed with this source code.
  */
 
+use SocialMedia\Objects\Credentials as Credentials;
+
 /**
  * Social Media Service where we are going to publish/unpublish to.
  *
@@ -16,7 +18,15 @@ namespace SocialMedia\Objects;
  */
 class Service
 {
+    /**
+     * @var mixed
+     */
     protected $api;
+
+    /**
+     * @var Credentials
+     */
+    protected $credentials;
 
     /**
      * Construct
@@ -24,9 +34,11 @@ class Service
      * @param mixed $api
      */
     public function __construct(
-        $api
+        $api,
+        Credentials $credentials
     ) {
         $this->setApi($api);
+        $this->setCredentials($credentials);
     }
 
     /**
@@ -37,6 +49,16 @@ class Service
     public function getApi()
     {
         return $this->api;
+    }
+
+    /**
+     * Get credentials
+     *
+     * @param Credentials
+     */
+    public function getCredentials()
+    {
+        return $this->credentials;
     }
 
     /**
@@ -55,6 +77,16 @@ class Service
     public function setApi($api)
     {
         $this->api = $api;
+    }
+
+    /**
+     * Set credentials
+     *
+     * @return Credentials
+     */
+    public function setCredentials(Credentials $credentials)
+    {
+        $this->credentials = $credentials;
     }
 
     /**
