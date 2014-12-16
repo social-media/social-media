@@ -2,11 +2,8 @@
 
 namespace SocialMedia\tests;
 
-// add your own credentials in this file
-require_once __DIR__ . '/credentials.php';
-
 // required to load
-require_once __DIR__ . '/../../../autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 /*
  * This file is part of the Social Pushing from Jeroen Desloovere.
@@ -26,16 +23,16 @@ use SocialMedia\Exception;
  */
 class SocialMediaTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @return SocialMedia
+     */
     public function testEmpty()
     {
-        $stack = array();
-        $this->assertEmpty($stack);
-
-        return $stack;
+        return new SocialMedia();
     }
 
     /**
-     * @expectedException InvalidArgumentException
+     * @expectedException Exception
      */
     public function testException()
     {
