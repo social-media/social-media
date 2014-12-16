@@ -16,6 +16,9 @@ namespace SocialMedia\Objects;
  */
 class Post
 {
+    /**
+     * @var array
+     */
     protected $parameters;
 
     /**
