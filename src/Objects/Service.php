@@ -46,6 +46,6 @@ class Service
      */
     public function setApi($api)
     {
-        $this->api = $api
+        $this->api = $api;
     }
 }
