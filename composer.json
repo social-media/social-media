@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SocialMedia\\": "src/"
+            "SocialMedia\\Core\\": "src/"
         }
     }
 }
