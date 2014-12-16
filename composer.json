@@ -1,0 +1,24 @@
+{
+	"name": "social-media/social-media",
+	"type": "library",
+	"description": "This Social Media PHP Class can (un)publish posts to any Social network.",
+    "keywords": ["social media", "php", "twitter", "facebook", "linkedin", "pinterest"],
+	"homepage": "https://github.com/social-media/social-media",
+	"license": "MIT",
+    "authors": [
+        {
+            "name": "Jeroen Desloovere",
+            "email": "info@jeroendesloovere.be",
+            "homepage": "http://jeroendesloovere.be",
+			"role": "Developer"
+        }
+    ],
+	"require": {
+		"php": ">=5.4.0"
+	},
+	"autoload": {
+		"psr-4": {
+		    "SocialMedia\\": "src/"
+		}
+	}
+}
