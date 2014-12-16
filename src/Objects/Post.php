@@ -32,7 +32,7 @@ class Post
     /**
      * Get parameter
      *
-     * @param string $key
+     * @param  string $key
      * @return string
      */
     public function get($key)

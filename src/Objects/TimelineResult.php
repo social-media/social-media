@@ -9,8 +9,6 @@ namespace SocialMedia\Core\Objects;
  * file that was distributed with this source code.
  */
 
-use SocialMedia\Core\Objects\Post as Post;
-use SocialMedia\Core\Objects\Service as Service;
 
 /**
  * A Timeline Result when we have (un)published something.
@@ -47,8 +45,9 @@ class TimelineResult
      * Construct
      *
      * @return $this
-     */   
-    public function __construct() {
+     */
+    public function __construct()
+    {
         return $this;
     }
 

@@ -9,8 +9,6 @@ namespace SocialMedia\Core\Objects;
  * file that was distributed with this source code.
  */
 
-use SocialMedia\Core\Objects\Credentials as Credentials;
-use SocialMedia\Core\Objects\Exception as Exception;
 
 /**
  * Social Media Service where we are going to publish/unpublish to.

@@ -9,7 +9,6 @@ namespace SocialMedia\Core\Objects;
  * file that was distributed with this source code.
  */
 
-use SocialMedia\Core\Objects\TimelineResult as TimelineResult;
 
 /**
  * Timeline we use to (un)publish messages to.
@@ -24,8 +23,8 @@ class Timeline
     /**
      * Publish to social media service
      *
-     * @param Service $service
-     * @param Post $post
+     * @param  Service        $service
+     * @param  Post           $post
      * @return TimelineResult $result
      */
     public function publish(Service $service, Post $post)
@@ -42,8 +41,8 @@ class Timeline
     /**
      * Unpublish from social media service
      *
-     * @param Service $service
-     * @param Post $post
+     * @param  Service        $service
+     * @param  Post           $post
      * @return TimelineResult $result
      */
     public function unpublish(Service $service, Post $post)

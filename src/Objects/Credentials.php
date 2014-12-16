@@ -16,5 +16,4 @@ namespace SocialMedia\Core\Objects;
  */
 class Credentials
 {
-
 }
