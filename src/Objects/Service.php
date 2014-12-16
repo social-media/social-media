@@ -10,6 +10,7 @@ namespace SocialMedia\Core\Objects;
  */
 
 use SocialMedia\Core\Objects\Credentials as Credentials;
+use SocialMedia\Core\Objects\Exception as Exception;
 
 /**
  * Social Media Service where we are going to publish/unpublish to.
@@ -71,6 +72,10 @@ class Service
      */
     public function runAction($action, $post)
     {
+        if ($this->getName() == null) {
+            throw new Exception('You can only run an action if a service (like Facebook, Twitter, ...) is being used.');
+        }
+
         $className = '\\SocialMedia\\' . $this->getName() . '\\Actions\\' . $action;
 
         return new $className(
