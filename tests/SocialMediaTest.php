@@ -75,7 +75,7 @@ class SocialMediaTest extends \PHPUnit_Framework_TestCase
      */
     public function testPublish()
     {
-        self::$api->timeline->publish($this->service, $this->post);
+        self::$api->getTimeline()->publish($this->service, $this->post);
     }
 
     /**
@@ -83,6 +83,6 @@ class SocialMediaTest extends \PHPUnit_Framework_TestCase
      */
     public function testUnpublish()
     {
-        self::$api->timeline->unpublish($this->service, $this->post);
+        self::$api->getTimeline()->unpublish($this->service, $this->post);
     }
 }

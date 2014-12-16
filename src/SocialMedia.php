@@ -19,13 +19,36 @@ use SocialMedia\Objects\Timeline as Timeline;
  */
 class SocialMedia
 {
-    public $timeline;
+    /**
+     * @var Timeline
+     */
+    protected $timeline;
 
     /**
      * Construct
      */
     public function __construct()
     {
-        $this->timeline = new Timeline();
+        $this->setTimeline(new Timeline());
+    }
+
+    /**
+     * Get timeline
+     *
+     * @return Timeline
+     */
+    public function getTimeline()
+    {
+        return $this->timeline;
+    }
+
+    /**
+     * Set timeline
+     *
+     * @param Timeline $timeline
+     */
+    protected function setTimeline(Timeline $timeline)
+    {
+        $this->timeline = $timeline;
     }
 }

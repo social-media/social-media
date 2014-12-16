@@ -18,5 +18,5 @@ $service = new FacebookService();
 $post = new FacebookPost();
 
 // (un)publish a message
-$api->timeline->publish($service, $post);
-$api->timeline->unpublish($service, $post);
+$api->getTimeline()->publish($service, $post);
+$api->getTimeline()->unpublish($service, $post);
