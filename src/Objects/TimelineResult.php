@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialMedia\Objects;
+namespace SocialMedia\Core\Objects;
 
 /*
  * This file is part of the Social Pushing from Jeroen Desloovere.
@@ -9,8 +9,8 @@ namespace SocialMedia\Objects;
  * file that was distributed with this source code.
  */
 
-use SocialMedia\Objects\Post as Post;
-use SocialMedia\Objects\Service as Service;
+use SocialMedia\Core\Objects\Post as Post;
+use SocialMedia\Core\Objects\Service as Service;
 
 /**
  * A Timeline Result when we have (un)published something.

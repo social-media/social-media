@@ -1,5 +1,5 @@
 <?php
-namespace SocialMedia;
+namespace SocialMedia\Core;
 
 /**
  * Social Media Exception class

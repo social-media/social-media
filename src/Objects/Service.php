@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialMedia\Objects;
+namespace SocialMedia\Core\Objects;
 
 /*
  * This file is part of the Social Pushing from Jeroen Desloovere.
@@ -9,7 +9,7 @@ namespace SocialMedia\Objects;
  * file that was distributed with this source code.
  */
 
-use SocialMedia\Objects\Credentials as Credentials;
+use SocialMedia\Core\Objects\Credentials as Credentials;
 
 /**
  * Social Media Service where we are going to publish/unpublish to.

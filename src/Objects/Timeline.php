@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialMedia\Objects;
+namespace SocialMedia\Core\Objects;
 
 /*
  * This file is part of the Social Pushing from Jeroen Desloovere.
@@ -9,7 +9,7 @@ namespace SocialMedia\Objects;
  * file that was distributed with this source code.
  */
 
-use SocialMedia\Objects\TimelineResult as TimelineResult;
+use SocialMedia\Core\Objects\TimelineResult as TimelineResult;
 
 /**
  * Timeline we use to (un)publish messages to.

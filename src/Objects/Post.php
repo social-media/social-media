@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialMedia\Objects;
+namespace SocialMedia\Core\Objects;
 
 /*
  * This file is part of the Social Pushing from Jeroen Desloovere.

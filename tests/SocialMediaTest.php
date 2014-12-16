@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialMedia\tests;
+namespace SocialMedia\Core\tests;
 
 // required to load
 require_once __DIR__ . '/../vendor/autoload.php';
@@ -12,11 +12,11 @@ require_once __DIR__ . '/../vendor/autoload.php';
  * file that was distributed with this source code.
  */
 
-use SocialMedia\SocialMedia;
-use SocialMedia\Exception;
-use SocialMedia\Objects\Post;
-use SocialMedia\Objects\Service;
-use SocialMedia\Objects\Credentials;
+use SocialMedia\Core\SocialMedia;
+use SocialMedia\Core\Exception;
+use SocialMedia\Core\Objects\Post;
+use SocialMedia\Core\Objects\Service;
+use SocialMedia\Core\Objects\Credentials;
 
 /**
  * Social Media Class which contains everything to (un)publish
