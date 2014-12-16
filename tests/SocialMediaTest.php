@@ -13,7 +13,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
  */
 
 use SocialMedia\Core\SocialMedia;
-use SocialMedia\Core\Exception;
+use SocialMedia\Core\Objects\Exception;
 use SocialMedia\Core\Objects\Post;
 use SocialMedia\Core\Objects\Service;
 use SocialMedia\Core\Objects\Credentials;
