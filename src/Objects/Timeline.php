@@ -30,12 +30,13 @@ class Timeline
      */
     public function publish(Service $service, Post $post)
     {
-        return new TimelineResult()
-            ->setServiceName($service->getName())
-            ->setAction(self::ACTION_PUBLISH)
-            ->setPost($post)
-            ->execute($service)
-        ;
+        $item = new TimelineResult();
+        $item->setServiceName($service->getName());
+        $item->setActionName(self::ACTION_PUBLISH);
+        $item->setPost($post);
+        $item->execute($service);
+
+        return $item;
     }
 
     /**
@@ -47,11 +48,12 @@ class Timeline
      */
     public function unpublish(Service $service, Post $post)
     {
-        return new TimelineResult()
-            ->setServiceName($service->getName())
-            ->setAction(self::ACTION_UNPUBLISH)
-            ->setPost($post)
-            ->execute()
-        ;
+        $item = new TimelineResult();
+        $item->setServiceName($service->getName());
+        $item->setActionName(self::ACTION_UNPUBLISH);
+        $item->setPost($post);
+        $item->execute($service);
+
+        return $item;
     }
 }
