@@ -7,8 +7,8 @@
  * file that was distributed with this source code.
  */
 
-use JeroenDesloovere\SocialMedia\Objects\Post as Post;
-use JeroenDesloovere\SocialMedia\Objects\Service as Service;
+use SocialMedia\Objects\Post as Post;
+use SocialMedia\Objects\Service as Service;
 
 // define api
 $api = new SocialMedia();

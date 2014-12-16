@@ -1,6 +1,6 @@
 <?php
 
-namespace JeroenDesloovere\SocialMedia\Objects;
+namespace SocialMedia\Objects;
 
 /*
  * This file is part of the Social Pushing from Jeroen Desloovere.
@@ -10,9 +10,7 @@ namespace JeroenDesloovere\SocialMedia\Objects;
  */
 
 /**
- * Service
- *
- * Social Media Service to publish/unpublish to.
+ * Social Media Service where we are going to publish/unpublish to.
  *
  * @author Jeroen Desloovere <info@jeroendesloovere.be>
  */

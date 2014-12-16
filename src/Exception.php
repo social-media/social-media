@@ -1,10 +1,10 @@
 <?php
-namespace JeroenDesloovere\SocialMedia;
+namespace SocialMedia;
 
 /**
  * Social Media Exception class
  *
- * @author Jeroen Desloovere <jeroen@siesqo.be>
+ * @author Jeroen Desloovere <info@jeroendesloovere.be>
  */
 class Exception extends \Exception
 {
