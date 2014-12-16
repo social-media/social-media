@@ -14,6 +14,8 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use SocialMedia\SocialMedia;
 use SocialMedia\Exception;
+use SocialMedia\Objects\Post;
+use SocialMedia\Objects\Service;
 
 /**
  * Social Media Class which contains everything to (un)publish
@@ -23,12 +25,24 @@ use SocialMedia\Exception;
  */
 class SocialMediaTest extends \PHPUnit_Framework_TestCase
 {
+    protected static $api;
+
     /**
      * @return SocialMedia
      */
-    public function testEmpty()
+    public static function setUpBeforeClass()
     {
-        return new SocialMedia();
+        self::$api = new SocialMedia();
+    }
+
+    public function testPublish()
+    {
+        // define external post objects
+        $service = new Service();
+        $post = new Post();
+        
+        // (un)publish a message
+        $api->timeline->publish($service, $post);
     }
 
     /**
