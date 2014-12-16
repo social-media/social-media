@@ -16,6 +16,7 @@ use SocialMedia\SocialMedia;
 use SocialMedia\Exception;
 use SocialMedia\Objects\Post;
 use SocialMedia\Objects\Service;
+use SocialMedia\Objects\Credentials;
 
 /**
  * Social Media Class which contains everything to (un)publish
@@ -32,7 +33,10 @@ class SocialMediaTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->service = new Service(array());
+        $this->service = new Service(
+            array(),
+            new Credentials()
+        );
         $this->post = new Post();
     }
 
