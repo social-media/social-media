@@ -20,11 +20,11 @@ use SocialMedia\Core\Objects\Service as Service;
 class TimelineResult
 {
     /**
-     * Action
+     * Action name
      *
      * @var string
      */
-    protected $action;
+    protected $actionName;
 
     /**
      * @var Post
@@ -61,7 +61,7 @@ class TimelineResult
     {
         $this->setResult(
             $service->runAction(
-                $this->getAction(),
+                $this->getActionName(),
                 $this->getPost()
             )
         );
@@ -72,9 +72,9 @@ class TimelineResult
      *
      * @return string
      */
-    public function getAction()
+    public function getActionName()
     {
-        return $this->action;
+        return $this->actionName;
     }
 
     /**
@@ -108,13 +108,13 @@ class TimelineResult
     }
 
     /**
-     * Set action
+     * Set action name
      *
      * @param string
      */
-    public function setAction($action)
+    public function setActionName($actionName)
     {
-        $this->action = $action;
+        $this->actionName = $actionName;
     }
 
     /**
