@@ -29,17 +29,11 @@ class Service
     protected $credentials;
 
     /**
-     * Construct
+     * Service name
      *
-     * @param mixed $api
+     * @var string
      */
-    public function __construct(
-        $api,
-        Credentials $credentials
-    ) {
-        $this->setApi($api);
-        $this->setCredentials($credentials);
-    }
+    protected $serviceName;
 
     /**
      * Get API
@@ -62,17 +56,35 @@ class Service
     }
 
     /**
-     * Publish
-     */    
-    public function publish()
+     * Get service name
+     *
+     * @param string
+     */
+    public function getServiceName()
     {
-    
+        return $this->serviceName;
+    }
+
+    /**
+     * Run action
+     *
+     * @param string $action
+     * @param string $post
+     */
+    public function runAction($action, $post)
+    {
+        $className = '\\SocialMedia\\' . $this->getServiceName() . '\\Actions\\' . $action;
+
+        return new $className(
+            $this,
+            $post
+        );
     }
 
     /**
      * Set API
      *
-     * @return mixed
+     * @param mixed $api
      */
     public function setApi($api)
     {
@@ -82,7 +94,7 @@ class Service
     /**
      * Set credentials
      *
-     * @return Credentials
+     * @param Credentials $credentials
      */
     public function setCredentials(Credentials $credentials)
     {
@@ -90,10 +102,12 @@ class Service
     }
 
     /**
-     * Unpublish
+     * Set service name
+     *
+     * @param string $name
      */
-    public function unpublish()
+    public function setServiceName($name)
     {
-    
+        $this->serviceName = $name;
     }
 }

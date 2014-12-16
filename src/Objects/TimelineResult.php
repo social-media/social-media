@@ -47,12 +47,13 @@ class TimelineResult
      * Construct
      *
      * @param Service $service
+     * @param string $action
      * @param Post $post
      */   
     public function __construct(
         Service $service,
-        Post $post,
-        $action
+        $action,
+        Post $post
     ) {
         $this->setAction($action);
         $this->setService($service);
@@ -125,12 +126,10 @@ class TimelineResult
      */
     public function setResult()
     {
-        // define variables
-        $action = $this->getAction();
-        $post = $this->getPost();
-        $service = $this->getService();
-
-        $this->result = $service->{$action}($post);
+        $this->result = $this->service->runAction(
+            $this->getAction(),
+            $this->getPost()
+        );
     }
 
     /**

@@ -18,6 +18,9 @@ use SocialMedia\Core\Objects\TimelineResult as TimelineResult;
  */
 class Timeline
 {
+    const ACTION_PUBLISH = 'Publish';
+    const ACTION_UNPUBLISH = 'Unpublish';
+
     /**
      * Publish to social media service
      *
@@ -29,8 +32,8 @@ class Timeline
     {
         return new TimelineResult(
             $service,
-            $post,
-            'publish'
+            self::ACTION_PUBLISH,
+            $post
         );
     }
 
@@ -45,8 +48,8 @@ class Timeline
     {
         return new TimelineResult(
             $service,
-            $post,
-            'unpublish'
+            self::ACTION_UNPUBLISH,
+            $post
         );
     }
 }
