@@ -30,11 +30,12 @@ class Timeline
      */
     public function publish(Service $service, Post $post)
     {
-        return new TimelineResult(
-            $service,
-            self::ACTION_PUBLISH,
-            $post
-        );
+        return new TimelineResult()
+            ->setServiceName($service->getName())
+            ->setAction(self::ACTION_PUBLISH)
+            ->setPost($post)
+            ->execute($service)
+        ;
     }
 
     /**
@@ -46,10 +47,11 @@ class Timeline
      */
     public function unpublish(Service $service, Post $post)
     {
-        return new TimelineResult(
-            $service,
-            self::ACTION_UNPUBLISH,
-            $post
-        );
+        return new TimelineResult()
+            ->setServiceName($service->getName())
+            ->setAction(self::ACTION_UNPUBLISH)
+            ->setPost($post)
+            ->execute()
+        ;
     }
 }

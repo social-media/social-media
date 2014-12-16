@@ -39,26 +39,32 @@ class TimelineResult
     protected $result;
 
     /**
-     * @var Service
+     * @var string
      */
-    protected $service;
+    protected $serviceName;
 
     /**
      * Construct
      *
-     * @param Service $service
-     * @param string $action
-     * @param Post $post
+     * @return $this
      */   
-    public function __construct(
-        Service $service,
-        $action,
-        Post $post
-    ) {
-        $this->setAction($action);
-        $this->setService($service);
-        $this->setPost($post);
-        $this->setResult();
+    public function __construct() {
+        return $this;
+    }
+
+    /**
+     * Execute
+     *
+     * @var Service $service
+     */
+    public function execute(Service $service)
+    {
+        $this->setResult(
+            $service->runAction(
+                $this->getAction(),
+                $this->getPost()
+            )
+        );
     }
 
     /**
@@ -92,13 +98,13 @@ class TimelineResult
     }
 
     /**
-     * Get service
+     * Get service name
      *
      * @return Service
      */
-    public function getService()
+    public function getServiceName()
     {
-        return $this->service;
+        return $this->serviceName;
     }
 
     /**
@@ -123,22 +129,21 @@ class TimelineResult
 
     /**
      * Set result
+     *
+     * @param mixed
      */
-    public function setResult()
+    public function setResult($result)
     {
-        $this->result = $this->service->runAction(
-            $this->getAction(),
-            $this->getPost()
-        );
+        $this->result = $result;
     }
 
     /**
-     * Set service
+     * Set service name
      *
-     * @param Service $service
+     * @param string $serviceName
      */
-    public function setService(Service $service)
+    public function setServiceName($serviceName)
     {
-        $this->service = $service;
+        $this->serviceName = $serviceName;
     }
 }
