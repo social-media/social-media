@@ -29,11 +29,9 @@ class Service
     protected $credentials;
 
     /**
-     * Service name
-     *
      * @var string
      */
-    protected $serviceName;
+    protected $name;
 
     /**
      * Get API
@@ -60,9 +58,9 @@ class Service
      *
      * @param string
      */
-    public function getServiceName()
+    public function getName()
     {
-        return $this->serviceName;
+        return $this->name;
     }
 
     /**
@@ -73,7 +71,7 @@ class Service
      */
     public function runAction($action, $post)
     {
-        $className = '\\SocialMedia\\' . $this->getServiceName() . '\\Actions\\' . $action;
+        $className = '\\SocialMedia\\' . $this->getName() . '\\Actions\\' . $action;
 
         return new $className(
             $this,
@@ -106,8 +104,8 @@ class Service
      *
      * @param string $name
      */
-    public function setServiceName($name)
+    public function setName($name)
     {
-        $this->serviceName = $name;
+        $this->name = $name;
     }
 }
