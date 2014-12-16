@@ -1,4 +1,7 @@
 # Social Media
+[![Latest Stable Version](http://img.shields.io/packagist/v/social-media/social-media.svg)](https://packagist.org/packages/social-media/social-media)
+[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/social-media/social-media/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/social-media/social-media.svg?branch=master)](https://travis-ci.org/social-media/social-media)
 
 This Social Media PHP Class can (un)publish posts to any Social network.
 
