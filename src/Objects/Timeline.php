@@ -27,7 +27,7 @@ class Timeline
      */
     public function publish(Service $service, Post $post)
     {
-        return new TimelinePostResult(
+        return new TimelineResult(
             $service,
             $post,
             'publish'
@@ -43,7 +43,7 @@ class Timeline
      */
     public function unpublish(Service $service, Post $post)
     {
-        return new TimelinePostResult(
+        return new TimelineResult(
             $service,
             $post,
             'unpublish'
