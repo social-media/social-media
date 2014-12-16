@@ -28,6 +28,17 @@ class SocialMediaTest extends \PHPUnit_Framework_TestCase
     protected static $api;
 
     /**
+     * Set up extra variables
+     */
+    protected function setUp()
+    {
+        $this->service = new Service(array());
+        $this->post = new Post();
+    }
+
+    /**
+     * Set up before class
+     *
      * @return SocialMedia
      */
     public static function setUpBeforeClass()
@@ -35,14 +46,20 @@ class SocialMediaTest extends \PHPUnit_Framework_TestCase
         self::$api = new SocialMedia();
     }
 
-    public function testPublish()
+    /**
+     * Tear down after class
+     */
+    public function tearDown()
     {
-        // define external post objects
-        $service = new Service(array());
-        $post = new Post();
-        
-        // (un)publish a message
-        self::$api->timeline->publish($service, $post);
+        $this->service = $this->post = null;
+    }
+
+    /**
+     * Tear down after class
+     */
+    public static function tearDownAfterClass()
+    {
+        self::$api = null;
     }
 
     /**
@@ -51,5 +68,21 @@ class SocialMediaTest extends \PHPUnit_Framework_TestCase
     public function testException()
     {
         throw new Exception('error');
+    }
+
+    /**
+     * Test publish function
+     */
+    public function testPublish()
+    {
+        self::$api->timeline->publish($this->service, $this->post);
+    }
+
+    /**
+     * Test unpublish function
+     */
+    public function testUnpublish()
+    {
+        self::$api->timeline->unpublish($this->service, $this->post);
     }
 }
