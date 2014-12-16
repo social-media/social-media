@@ -38,11 +38,11 @@ class SocialMediaTest extends \PHPUnit_Framework_TestCase
     public function testPublish()
     {
         // define external post objects
-        $service = new Service();
+        $service = new Service(array());
         $post = new Post();
         
         // (un)publish a message
-        $api->timeline->publish($service, $post);
+        self::$api->timeline->publish($service, $post);
     }
 
     /**
