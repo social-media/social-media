@@ -40,6 +40,14 @@ class Service
     }
 
     /**
+     * Publish
+     */    
+    public function publish()
+    {
+    
+    }
+
+    /**
      * Set API
      *
      * @return mixed
@@ -47,5 +55,13 @@ class Service
     public function setApi($api)
     {
         $this->api = $api;
+    }
+
+    /**
+     * Unpublish
+     */
+    public function unpublish()
+    {
+    
     }
 }
