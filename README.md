@@ -33,8 +33,8 @@ $service = new Post();
 $post = new Service();
 
 // (un)publish a message
-$api->timeline->publish($service, $post);
-$api->timeline->unpublish($service, $post);
+$api->getTimeline()->publish($service, $post);
+$api->getTimeline()->unpublish($service, $post);
 ```
 
 > [View all examples](/examples/example.php) or check [the Social Media class](/src/SocialMedia.php).
