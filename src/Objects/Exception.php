@@ -1,4 +1,5 @@
 <?php
+
 namespace SocialMedia\Core\Objects;
 
 /**
