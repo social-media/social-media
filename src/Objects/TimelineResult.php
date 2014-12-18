@@ -42,16 +42,6 @@ class TimelineResult
     protected $serviceName;
 
     /**
-     * Construct
-     *
-     * @return $this
-     */
-    public function __construct()
-    {
-        return $this;
-    }
-
-    /**
      * Execute
      *
      * @var Service $service
