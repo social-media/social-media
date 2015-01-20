@@ -16,8 +16,7 @@ use SocialMedia\Core\SocialMedia;
 use SocialMedia\Core\Objects\Timeline;
 
 /**
- * Social Media Class which contains everything to (un)publish
- * to the timeline or connect to social media.
+ * Social Media Test Class.
  *
  * @author Jeroen Desloovere <info@jeroendesloovere.be>
  */
