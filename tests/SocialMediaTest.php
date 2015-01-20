@@ -44,9 +44,9 @@ class SocialMediaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test publish function
+     * Test timeline object
      */
-    public function testTimeline()
+    public function testTimelineObject()
     {
         $this->assertEquals(new Timeline(), self::$api->getTimeline());
     }
