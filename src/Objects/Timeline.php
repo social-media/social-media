@@ -65,11 +65,17 @@ class Timeline
         Service $service,
         Post $post
     ) {
+        // init result
         $item = new TimelineResult();
+
+        // setting up required variables
         $item->setActionName($actionName);
         $item->setPost($post);
+
+        // execute the action
         $item->execute($service);
 
+        // return the item that now contains the result
         return $item;
     }
 }
