@@ -22,14 +22,6 @@ class Post
     protected $parameters;
 
     /**
-     * Get all parameters
-     */
-    public function getAll()
-    {
-        return $this->parameters;
-    }
-
-    /**
      * Get parameter
      *
      * @param  string $key
@@ -38,6 +30,14 @@ class Post
     public function get($key)
     {
         return (isset($this->parameters[$key])) ? $this->parameters[$key] : null;
+    }
+
+    /**
+     * Get all parameters
+     */
+    public function getAll()
+    {
+        return $this->parameters;
     }
 
     /**
