@@ -57,7 +57,7 @@ class PostTest extends \PHPUnit_Framework_TestCase
     public function testOneParameter()
     {
         $key = 'this_key';
-        $value = "This message will be posted on FB.";
+        $value = "This is a test value";
         $this->post->set($key, $value);
         $this->assertEquals($value, $this->post->get($key));
 
