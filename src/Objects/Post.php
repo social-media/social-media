@@ -19,7 +19,7 @@ class Post
     /**
      * @var array
      */
-    protected $parameters;
+    protected $parameters = array();
 
     /**
      * Get parameter
