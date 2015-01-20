@@ -60,7 +60,7 @@ class Timeline
      * @param  Post           $post
      * @return TimelineResult $result
      */
-    private function runAction(
+    protected function runAction(
         $actionName,
         Service $service,
         Post $post
