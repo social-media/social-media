@@ -48,6 +48,10 @@ class TimelineResult
      */
     public function execute(Service $service)
     {
+        // define service name
+        $this->setServiceName($service->getName());
+
+        // set result
         $this->setResult(
             $service->runAction(
                 $this->getActionName(),
