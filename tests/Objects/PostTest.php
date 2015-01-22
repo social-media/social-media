@@ -22,8 +22,6 @@ use SocialMedia\Core\Objects\Post;
  */
 class PostTest extends \PHPUnit_Framework_TestCase
 {
-    protected static $post;
-
     /**
      * Set up extra variables
      */
