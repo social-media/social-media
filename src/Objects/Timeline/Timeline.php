@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialMedia\Core\Objects;
+namespace SocialMedia\Core\Objects\Timeline;
 
 /*
  * This file is part of the Social Pushing from Jeroen Desloovere.
@@ -9,13 +9,14 @@ namespace SocialMedia\Core\Objects;
  * file that was distributed with this source code.
  */
 
+use SocialMedia\Core\Objects\Timeline\Core as TimelineCore;
 
 /**
  * Timeline we use to (un)publish messages to.
  *
  * @author Jeroen Desloovere <info@jeroendesloovere.be>
  */
-class Timeline
+class Timeline extends TimelineCore
 {
     const ACTION_PUBLISH = 'Publish';
     const ACTION_UNPUBLISH = 'Unpublish';
@@ -50,32 +51,5 @@ class Timeline
             $service,
             $post
         );
-    }
-
-    /**
-     * Run action
-     *
-     * @param  string         $action
-     * @param  Service        $service
-     * @param  Post           $post
-     * @return TimelineResult $result
-     */
-    protected function runAction(
-        $actionName,
-        Service $service,
-        Post $post
-    ) {
-        // init result
-        $item = new TimelineResult();
-
-        // setting up required variables
-        $item->setActionName($actionName);
-        $item->setPost($post);
-
-        // execute the action
-        $item->execute($service);
-
-        // return the item that now contains the result
-        return $item;
     }
 }

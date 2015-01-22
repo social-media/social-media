@@ -9,7 +9,7 @@ namespace SocialMedia\Core;
  * file that was distributed with this source code.
  */
 
-use SocialMedia\Core\Objects\Timeline as Timeline;
+use SocialMedia\Core\Objects\Timeline\Timeline;
 
 /**
  * Social Media Class which contains everything to (un)publish
