@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialMedia\Core\Objects;
+namespace SocialMedia\Core\Types;
 
 /*
  * This file is part of the Social Pushing from Jeroen Desloovere.
@@ -45,9 +45,12 @@ class Post
      *
      * @param string $key
      * @param string $value
+     * @return Post
      */
     public function set($key, $value)
     {
         $this->parameters[$key] = $value;
+
+        return $this;
     }
 }

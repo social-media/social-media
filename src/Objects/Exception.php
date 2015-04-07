@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialMedia\Core\Objects;
+namespace SocialMedia\Core\Types;
 
 /**
  * Social Media Exception class

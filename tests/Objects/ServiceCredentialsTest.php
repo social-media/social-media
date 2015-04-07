@@ -12,14 +12,14 @@ require_once __DIR__ . '/../../vendor/autoload.php';
  * file that was distributed with this source code.
  */
 
-use SocialMedia\Core\Objects\Credentials;
+use SocialMedia\Core\Types\ServiceCredentials;
 
 /**
  * Social Media Credentials Test.
  *
  * @author Jeroen Desloovere <info@jeroendesloovere.be>
  */
-class CredentialsTest extends \PHPUnit_Framework_TestCase
+class ServiceCredentialsTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Set up extra variables
@@ -27,7 +27,7 @@ class CredentialsTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->credentials = new Credentials();
+        $this->credentials = new ServiceCredentials();
     }
 
     /**

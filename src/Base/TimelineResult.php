@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialMedia\Core\Objects\Timeline;
+namespace SocialMedia\Core\Base;
 
 /*
  * This file is part of the Social Pushing from Jeroen Desloovere.
@@ -14,7 +14,7 @@ namespace SocialMedia\Core\Objects\Timeline;
  *
  * @author Jeroen Desloovere <info@jeroendesloovere.be>
  */
-class Result
+class TimelineResult
 {
     /**
      * Action name
@@ -103,39 +103,51 @@ class Result
      * Set action name
      *
      * @param string
+     * @return TimelineResult
      */
     public function setActionName($actionName)
     {
         $this->actionName = $actionName;
+
+        return $this;
     }
 
     /**
      * Set post
      *
      * @param Post $post
+     * @return TimelineResult
      */
     public function setPost(Post $post)
     {
         $this->post = $post;
+
+        return $this;
     }
 
     /**
      * Set result
      *
      * @param mixed
+     * @return TimelineResult
      */
     public function setResult($result)
     {
         $this->result = $result;
+
+        return $this;
     }
 
     /**
      * Set service name
      *
      * @param string $serviceName
+     * @return TimelineResult
      */
     public function setServiceName($serviceName)
     {
         $this->serviceName = $serviceName;
+
+        return $this;
     }
 }

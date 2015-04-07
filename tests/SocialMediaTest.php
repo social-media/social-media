@@ -13,7 +13,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
  */
 
 use SocialMedia\Core\SocialMedia;
-use SocialMedia\Core\Objects\Timeline\Timeline;
+use SocialMedia\Core\Base\Timeline;
 
 /**
  * Social Media Test Class.

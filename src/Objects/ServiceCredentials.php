@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialMedia\Core\Objects;
+namespace SocialMedia\Core\Types;
 
 /*
  * This file is part of the Social Pushing from Jeroen Desloovere.
@@ -14,6 +14,6 @@ namespace SocialMedia\Core\Objects;
  *
  * @author Jeroen Desloovere <info@jeroendesloovere.be>
  */
-class Credentials
+class ServiceCredentials
 {
 }

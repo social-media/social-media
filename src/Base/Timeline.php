@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialMedia\Core\Objects\Timeline;
+namespace SocialMedia\Core\Base;
 
 /*
  * This file is part of the Social Pushing from Jeroen Desloovere.
@@ -10,12 +10,15 @@ namespace SocialMedia\Core\Objects\Timeline;
  */
 
 /**
- * Timeline Core
+ * Timeline we use to (un)publish messages to.
  *
  * @author Jeroen Desloovere <info@jeroendesloovere.be>
  */
-class Core
+class Timeline
 {
+    const ACTION_PUBLISH = 'Publish';
+    const ACTION_UNPUBLISH = 'Unpublish';
+
     /**
      * Run action
      *

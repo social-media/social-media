@@ -9,7 +9,7 @@ namespace SocialMedia\Core;
  * file that was distributed with this source code.
  */
 
-use SocialMedia\Core\Objects\Timeline\Timeline;
+use SocialMedia\Core\Base\Timeline;
 
 /**
  * Social Media Class which contains everything to (un)publish
@@ -46,9 +46,12 @@ class SocialMedia
      * Set timeline
      *
      * @param Timeline $timeline
+     * @return SocialMedia
      */
     protected function setTimeline(Timeline $timeline)
     {
         $this->timeline = $timeline;
+
+        return $this;
     }
 }

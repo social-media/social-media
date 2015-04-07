@@ -22,8 +22,8 @@ This Social Media PHP Class can (un)publish posts to any Social network.
 
 ``` php
 use SocialMedia\SocialMedia as SocialMedia;
-use SocialMedia\Objects\Post as Post;
-use SocialMedia\Objects\Service as Service;
+use SocialMedia\Types\Post as Post;
+use SocialMedia\Types\Service as Service;
 
 // define api
 $api = new SocialMedia();

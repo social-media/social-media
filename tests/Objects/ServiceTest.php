@@ -12,7 +12,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
  * file that was distributed with this source code.
  */
 
-use SocialMedia\Core\Objects\Service;
+use SocialMedia\Core\Types\Service;
 
 /**
  * Social Media Service Test.

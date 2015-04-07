@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialMedia\Core\Objects;
+namespace SocialMedia\Core\Types;
 
 /*
  * This file is part of the Social Pushing from Jeroen Desloovere.
@@ -8,7 +8,6 @@ namespace SocialMedia\Core\Objects;
  * For the full copyright and license information, please view the license
  * file that was distributed with this source code.
  */
-
 
 /**
  * Social Media Service where we are going to publish/unpublish to.
@@ -86,29 +85,38 @@ class Service
      * Set API
      *
      * @param mixed $api
+     * @return Service
      */
     public function setApi($api)
     {
         $this->api = $api;
+
+        return $this;
     }
 
     /**
      * Set credentials
      *
      * @param Credentials $credentials
+     * @return Service
      */
     public function setCredentials(Credentials $credentials)
     {
         $this->credentials = $credentials;
+
+        return $this;
     }
 
     /**
      * Set service name
      *
      * @param string $name
+     * @return Service
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 }

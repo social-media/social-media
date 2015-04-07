@@ -3,7 +3,7 @@
 namespace SocialMedia\Core\tests;
 
 // required to load
-require_once __DIR__ . '/../../../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 /*
  * This file is part of the Social Pushing from Jeroen Desloovere.
@@ -12,15 +12,15 @@ require_once __DIR__ . '/../../../vendor/autoload.php';
  * file that was distributed with this source code.
  */
 
-use SocialMedia\Core\Objects\Timeline\Timeline;
-use SocialMedia\Core\Objects\Timeline\Result as TimelineResult;
+use SocialMedia\Core\Base\Timeline;
+use SocialMedia\Core\Base\TimelineResult;
 
 /**
  * Social Media Timeline Result Class
  *
  * @author Jeroen Desloovere <info@jeroendesloovere.be>
  */
-class ResultTest extends \PHPUnit_Framework_TestCase
+class TimelineResultTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Set up extra variables
