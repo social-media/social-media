@@ -28,7 +28,7 @@ class TimelineResultTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->result = new TimelineResult();
+        $this->timelineResult = new TimelineResult();
     }
 
     /**
@@ -36,7 +36,7 @@ class TimelineResultTest extends \PHPUnit_Framework_TestCase
      */
     public function tearDown()
     {
-        $this->result = null;
+        $this->timelineResult = null;
         parent::tearDown();
     }
 
@@ -46,11 +46,17 @@ class TimelineResultTest extends \PHPUnit_Framework_TestCase
     public function testActions()
     {
         // Publish
-        $this->result->setActionName(Timeline::ACTION_PUBLISH);
-        $this->assertEquals(Timeline::ACTION_PUBLISH, $this->result->getActionName());
+        $this->timelineResult->setActionName(Timeline::ACTION_PUBLISH);
+        $this->assertEquals(
+            Timeline::ACTION_PUBLISH,
+            $this->timelineResult->getActionName()
+        );
 
         // Unpublish
-        $this->result->setActionName(Timeline::ACTION_UNPUBLISH);
-        $this->assertEquals(Timeline::ACTION_UNPUBLISH, $this->result->getActionName());
+        $this->timelineResult->setActionName(Timeline::ACTION_UNPUBLISH);
+        $this->assertEquals(
+            Timeline::ACTION_UNPUBLISH,
+            $this->timelineResult->getActionName()
+        );
     }
 }

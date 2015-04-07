@@ -9,6 +9,9 @@ namespace SocialMedia\Core\Base;
  * file that was distributed with this source code.
  */
 
+use SocialMedia\Core\Types\Service;
+use SocialMedia\Core\Types\Post;
+
 /**
  * Timeline we use to (un)publish messages to.
  *
@@ -27,22 +30,21 @@ class Timeline
      * @param  Post           $post
      * @return TimelineResult $result
      */
-    protected function runAction(
+    public function runAction(
         $actionName,
         Service $service,
         Post $post
     ) {
-        // init result
-        $item = new TimelineResult();
+        // init timeline result
+        $result = new TimelineResult();
 
-        // setting up required variables
-        $item->setActionName($actionName);
-        $item->setPost($post);
+        // build result
+        $result
+            ->setActionName($actionName)
+            ->setPost($post)
+            ->execute($service)
+        ;
 
-        // execute the action
-        $item->execute($service);
-
-        // return the item that now contains the result
-        return $item;
+        return $result;
     }
 }

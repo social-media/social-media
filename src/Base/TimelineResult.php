@@ -9,6 +9,9 @@ namespace SocialMedia\Core\Base;
  * file that was distributed with this source code.
  */
 
+use SocialMedia\Core\Types\Service;
+use SocialMedia\Core\Types\Post;
+
 /**
  * A Timeline Result when we have (un)published something.
  *
@@ -29,11 +32,11 @@ class TimelineResult
     protected $post;
 
     /**
-     * Result
+     * Result data
      *
      * @var array
      */
-    protected $result;
+    protected $resultData;
 
     /**
      * @var string
@@ -51,7 +54,7 @@ class TimelineResult
         $this->setServiceName($service->getName());
 
         // set result
-        $this->setResult(
+        $this->setResultData(
             $service->runAction(
                 $this->getActionName(),
                 $this->getPost()
@@ -80,13 +83,13 @@ class TimelineResult
     }
 
     /**
-     * Get result
+     * Get result data
      *
      * @return array
      */
-    public function getResult()
+    public function getResultData()
     {
-        return $this->result;
+        return $this->resultData;
     }
 
     /**
@@ -126,14 +129,14 @@ class TimelineResult
     }
 
     /**
-     * Set result
+     * Set result data
      *
-     * @param mixed
+     * @param array $resultData
      * @return TimelineResult
      */
-    public function setResult($result)
+    public function setResultData(array $resultData)
     {
-        $this->result = $result;
+        $this->resultData = $resultData;
 
         return $this;
     }
