@@ -18,8 +18,7 @@ This Social Media PHP Class can (un)publish posts to any Social network.
 ```
 
 > Add the above in your `composer.json` file when using [Composer](https://getcomposer.org).
-
-### Examples
+### Example
 
 ``` php
 use SocialMedia\SocialMedia as SocialMedia;
